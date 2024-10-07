@@ -5,5 +5,8 @@ public class Main{
 
         Car car2 = new Car("blue", 50000.00, 'L');
         System.out.println(car2.toString());  
+
+        Car car3 = new Car("green", 9000.00, 'S');
+        System.out.println(car3.toString());
     }
 }
