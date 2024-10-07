@@ -31,7 +31,7 @@ public class Car {
         this.price = price;
     }
     public void setSize(char size){
-        this.size = Character.toUpperCase(size);  
+        this.size = size; 
     }
 
     public String toString() {
