@@ -9,18 +9,20 @@ public class Car {
         this.price = price;
         this.size = Character.toUpperCase(size);  
     }
-    
+
     //getters
     public String getColor(){
         return color;
     }
+
     public double getPrice(){
         return price;
     }
+
     public char getSize(){
         return size;
     }
-    
+
     //setters
     public void setColor(String color){
         this.color = color;
@@ -31,11 +33,10 @@ public class Car {
     public void setSize(char size){
         this.size = Character.toUpperCase(size);  
     }
-    
-    public String toString() {
-        String formattedPrice = String.format("%.2f", price);
-        String sizeDescriptor;
 
+    public String toString() {
+        String sizeDescriptor;
+    
         switch (size) {
             case 'S':
                 sizeDescriptor = "small";
@@ -50,6 +51,6 @@ public class Car {
                 sizeDescriptor = "unknown";  
                 break;
         }
-        return "Car (" + color + ") - P" + formattedPrice + " - " + sizeDescriptor;
-    }
+        return String.format("Car (%s) - P%.2f - %s", color, price, sizeDescriptor);
+    }   
 }
